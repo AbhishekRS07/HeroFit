@@ -63,7 +63,7 @@ form.sign-in-form {
 
 .title {
   font-size: 2.2rem;
-  color: #444;
+  color: #f8f9fa;
   margin-bottom: 10px;
 }
 
@@ -95,7 +95,7 @@ form.sign-in-form {
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #333;
+  color: #ddd8d8;
 }
 
 .input-field input::placeholder {
@@ -135,8 +135,8 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: #310e68;
-  background-image: linear-gradient(to right,rgb(9,2,15), rgb(34,11,56),rgb(8,2,13));
+  background-color: #5318b2;
+  
   border: none;
   outline: none;
   height: 49px;
@@ -172,7 +172,7 @@ form.sign-in-form {
   right: 48%;
   transform: translateY(-50%);
   background-color: #310e68;
-  background-image: linear-gradient(to right,rgb(50, 11, 85), rgb(45, 37, 150),rgb(38, 9, 61));;
+  background-image: linear-gradient(to right,rgb(61, 16, 100), rgb(57, 49, 171),rgb(38, 9, 61));;
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;

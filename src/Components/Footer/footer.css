@@ -1,12 +1,13 @@
 #parentfooter{
     width: 100%;
     height: 550px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to right,rgb(5, 3, 8), rgb(34,11,56),rgb(15, 13, 13));
+    background-color: #310e68;
+   background-image: linear-gradient(to right,rgb(9,2,15), rgb(34,11,56),rgb(0, 0, 0));
     padding: 40px;
 }
 #child1{
@@ -89,13 +90,14 @@ label{
     #parentfooter{
        display: grid;
        grid-template-columns: repeat(1,1fr);
+       align-items: center;
        place-items:  center;
        height: auto;
        /* row-gap: 70px; */
        
     }
     #child1,#child2,#child3,#child4{
-      width: 90%;
+      width: 100%;
       height: 200px;
     }
      
