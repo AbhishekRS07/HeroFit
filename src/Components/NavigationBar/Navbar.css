@@ -14,14 +14,12 @@
   position: sticky;
   /* padding-top: 20px; */
   transition: 0.4s ease;
+  z-index: 100;
 }
 
-/* .Navbar > .nav-logo {
-  font-weight: 700;
-  font-size: 21px;
-  margin: 15px;
-  color: #ffffff;
-} */
+#logo1 {
+ width: 15%;
+}
 
 .Navbar > .nav-items > a {
   color: rgb(243, 243, 243);
@@ -59,6 +57,8 @@
   display: flex;
   gap: 30px;
   align-items: center;
+  margin-bottom: 20px;
+  /* justify-content: space-between; */
 }
 
 #signin {
@@ -96,9 +96,13 @@
 }
 
 @media (max-width: 790px) {
+  #signin{
+    display: none;
+  }
+ 
   .Navbar > .nav-items {
     position: absolute;
-    top: 60px;
+    top: 90px;
     display: flex;
     flex-direction: column;
     background: #3b4da7;
@@ -107,6 +111,7 @@
     height: 100%;
     transform: translateX(-100%);
     transition: all 0.45s;
+    
   }
   .Navbar{
      background-color: black;
@@ -114,6 +119,7 @@
 
   .Navbar > .nav-items > a::before {
     background: transparent;
+   
   }
 
   .Navbar > .nav-items.open {
@@ -127,6 +133,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    /* backdrop-filter: blur(5px); */
   }
 
   .nav-toggle > .bar {
