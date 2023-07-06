@@ -17,6 +17,7 @@ body {
     justify-content: center;
     margin-top: 90px;
     margin-bottom: 50px;
+    line-height: 30px;
 }
 h2{
     font-size: 30px;
@@ -93,7 +94,7 @@ h2{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
+  padding: 10px 40px;
   text-align: center;
   font-size: 14px;
   transition: height 0.5s;
@@ -103,7 +104,7 @@ h2{
   margin-bottom: 5px;
   margin-top: 80%;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   letter-spacing: 2px;
 }
 .overlay a {
