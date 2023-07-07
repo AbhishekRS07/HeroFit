@@ -4,31 +4,37 @@
   font-family:sans-serif;
   box-sizing: border-box;
 }
-body {
+/* body {
     width: 100%;
     background-color: #310e68;
     background-image: linear-gradient(to right,rgb(9,2,15), rgb(34,11,56),rgb(0, 0, 0));
   color: #fff;
-}
+} */
+
 #parent{
+    background-color: #310e68;
+   background-image: linear-gradient(to right,rgb(9,2,15), rgb(34,11,56),rgb(0, 0, 0));
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 90px;
-    margin-bottom: 50px;
+    /* margin-top: 90px; */
+    /* margin-bottom: 50px; */
+    padding: 50px;
     line-height: 30px;
+
 }
 h2{
     font-size: 30px;
 }
 
 #logo{
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     gap: 15px;
 }
 #start{
@@ -62,9 +68,10 @@ h2{
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 40px;
+  column-gap: 100px;
+  row-gap: 60px;
   margin-top: 50px;
-  place-items: center;
+  place-items:center;
 }
 .box {
   border-radius: 10px;
@@ -106,6 +113,7 @@ h2{
   font-family: "Bebas Neue", sans-serif;
   font-size: 20px;
   letter-spacing: 2px;
+  color: #fefdfd;
 }
 .overlay a {
   margin-top: 10px;
