@@ -41,15 +41,15 @@
    width: 80%;
   
 }
-h1{
+#try1 h1{
     font-size: 40px;
     color: white;
  }
- p{
+ #try1 p{
      color: rgb(162,158,162);
      font-size: 18px;
  }
- button{
+ #buttonss{
     
         width: 140px;
         height: 55px;
@@ -62,7 +62,7 @@ h1{
         /* padding: 10px; */
     
  }
- button:hover{
+ #buttonss:hover{
     background-color:rgb(93, 8, 150) ;
     color: whitesmoke;
     /* border: 3px solid white; */
@@ -81,7 +81,7 @@ h1{
        padding: 20px;
         
     }
-    h1{
+    #try1 h1{
        font-size: 30px;
        color: white;
        padding: 10px;
@@ -98,13 +98,13 @@ h1{
         gap: 20px;
         
      }
-     p{
+     #try1 p{
         font-size: 15px;
      }
-     button{
+     #buttonss{
         width:100px ;
      }
-     img{
+     #try2> img{
         width: 100%;
      }
 }
