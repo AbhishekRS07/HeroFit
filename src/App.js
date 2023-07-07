@@ -1,4 +1,5 @@
 import "./App.css";
+import AllData from "./Components/AllData";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Homepage/Home";
 import Register from "./Components/Login/Register";
@@ -19,13 +20,9 @@ import TrySection from "./Components/TrySection/TrySection";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Home />
-      <Main/>
-      <TrySection />
-      <News />
-      <Slider/>
-      <Footer />
+      {/* <Navbar />
+    <AllData/>
+      <Footer /> */}
     
       
       {/* <Subscribe/> */}
