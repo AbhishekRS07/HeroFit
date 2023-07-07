@@ -20,6 +20,13 @@
     
 }
 
+#intro>p{
+   color: rgba(255, 255, 255, 0.71);
+}
+#intro>h1{
+    color: white;
+ }
+
 #main-container{
     width: 100%;
     display: flex;
@@ -63,6 +70,7 @@
 }
 #cards >p{
     font-size: 16px;
+    color: rgba(255, 255, 255, 0.728);
 }
 
 

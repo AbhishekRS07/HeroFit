@@ -89,6 +89,7 @@
 }
 .content p{
     font-size: 16px;
+    color: #d5d8d9bb;
 }
 
 @media (max-width: 790px) {

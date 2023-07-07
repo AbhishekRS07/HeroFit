@@ -13,7 +13,7 @@ const TrySection = () => {
           or commercial gym, keeping your budget, lifestyle and fitness goals in
           mind.
         </p>
-        <button>Try Now!</button>
+        <button id="buttonss">Try Now!</button>
       </div>
       <div id="try2">
       <img src={phone} alt="" />
