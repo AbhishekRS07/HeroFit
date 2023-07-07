@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <div className="Navbar">
-        <img style={{width:"12%"}} src={logo} alt="" />
+        <img id='logo1' src={logo} alt="" />
       <div className={`nav-items ${isOpen && "open"}`}>
         <a href="/home">Home</a>
         <a href="/about">Program</a>
