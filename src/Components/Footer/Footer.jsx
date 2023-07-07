@@ -1,9 +1,10 @@
 import React from "react";
 import "./footer.css";
-
+import logo2 from "../Images/logo.png"
 const Footer = () => {
   return (
-    <div id="parentfooter">
+      <div id="grandparent">
+        <div id="parentfooter">
       <div id="child1">
         <h1>HeroFit.</h1>
         <p>Lorem ipsum dolor sit amet.</p>
@@ -31,6 +32,18 @@ const Footer = () => {
         <p>Become Partner</p>
       </div>
     </div>
+
+
+     <div id="parent2">
+     <img id='logo2' src={logo2} alt="" />
+     </div>
+
+      </div>
+
+
+
+
+   
   );
 };
 

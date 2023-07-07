@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
 
 import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -10,6 +10,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import AuthContextProvider from './Components/Context/AuthContextProvider';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+<<<<<<< HEAD
         <AuthContextProvider>
 <BrowserRouter>
 <ChakraProvider>
@@ -19,9 +20,10 @@ root.render(
     </BrowserRouter>
     </AuthContextProvider>
 
+=======
+ 
+    <App />
+  
+>>>>>>> b435d9a8b9e35478d529d7842dd8f830395da90f
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
