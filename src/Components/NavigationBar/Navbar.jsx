@@ -14,6 +14,7 @@ const Navbar = () => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
       // console.log(scrolled)
+       // console.log(scrolled)
       if (scrolled > 20) {
         document.querySelector(".Navbar").style.backgroundColor = "black";
       }
@@ -75,7 +76,7 @@ const Navbar = () => {
       <div id='btns'>
       {isAuth ? (
           <>
-  <h2 id="signin" >Aniket</h2>
+  <h2 id="signin" >Aniket</h2> 
   <button  id="signin" onClick={() => {logout()}}>Log out</button>
   </>
   
