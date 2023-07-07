@@ -1,16 +1,24 @@
 
 import './App.css';
+import AllRoutes from './Components/AllRouts/Routs';
 import Footer from './Components/Footer/Footer';
 import Home from './Components/Homepage/Home';
 import Register from './Components/Login/Register';
-import Navbar from './Components/NavigationBar/Navbar';
+import Boxing from './Components/Product/Boxing';
+import { TempNav } from './Components/NavigationBar/TempNav';
 
 function App() {
   return (
     <div className="App">
-    <Navbar/>
-   <Home/>
-   <Footer/>
+    {/* <Navbar/>
+  
+
+{/* <Boxing/> */}
+   
+   <TempNav/>
+  
+   <AllRoutes/>
+   {/* <Footer/> */}
    {/* <Register/> */}
     </div>
   );

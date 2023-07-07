@@ -2,6 +2,7 @@ import React from "react";
 import "./home.css";
 import person from "../Images/person.png"
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
+import ProductPage from "../Product/Boxing";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
         <button id="watch"> < PlayCircleOutlineIcon sx={{fontSize:"30px"}}/>Watch Me!</button>
         </div>
       </div>
+     
     </div>
   );
 };
