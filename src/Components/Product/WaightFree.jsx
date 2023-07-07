@@ -1,14 +1,20 @@
+
+
+
 import React, { useState, useEffect } from 'react';
 import axios from "axios"
 import { Navigate, useNavigate } from "react-router-dom";
+import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Input } from '@chakra-ui/react'
 
 const WaightFree = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  const[page, setPage]= useState(1)
   const[search, setSearch]=useState("")
   const[state, setState]=useState([])
-
+  const[sort, setSort]=useState("")
+  const[filter, setFilter]=useState("")
 //  console.log(state)
 const navigate= useNavigate()
 
@@ -34,7 +40,7 @@ return ()=> clearTimeout(debounceFn);
   const getData= async ()=>{
    
 
-    let res= await axios.get(`https://herofit-app-server.onrender.com/free_weight?q=${search}`)
+    let res= await axios.get(`https://herofit-app-server.onrender.com/weight?q=${search}`)
     console.log(res.data);
     setState(res.data)
   }
@@ -43,49 +49,25 @@ return ()=> clearTimeout(debounceFn);
       }
     
 
-  // const [query, setQuery] = useState('');
-  // const [results, setResults] = useState([]);
-
-  // const debounce = function (fn, d) {
-  //   let timer;
-  //   return function () {
-  //     let context = this,
-  //       args = arguments;
-  //     clearTimeout(timer);
-  //     timer = setTimeout(() => {
-  //       fn.apply(context, args);
-  //     }, d);
-  //   };
-  // };
-
-//  const goToProductDetails = (id) => {
-//   navigate(`singlboxin/${id}`)
-//    };
-
-  // const search = debounce(() => {
-  //   if (query === "") {
-  //     setResults([]);
-  //     return;
-  //   }
-  //   fetch(`https://fakestoreapi.com/products?q=${query}`)
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       setResults(data);
-  //     })
-  //     .catch(error => console.log(error));
-  // }, 500);
-
-  // useEffect(() => {
-  //   search();
-  // }, [query]);
-
 useEffect(() => {
   fetchProductData();
-}, []);
+}, [page,sort,filter]);
 
   const fetchProductData = async () => {
+    let url=`https://herofit-app-server.onrender.com/weight?_page=${page}&_limit=9`
+    // if(sort==="high"){
+    //     url+="&_sort=price&_order=desc"
+    // }  if(sort==="low"){
+    //     url+="&_sort=price&_order=asc"
+
+    // }
+
+    
+    if (filter) {
+      url += `&category=${filter}`;
+    }
     try {
-      const response = await fetch('https://herofit-app-server.onrender.com/free_weight');
+      const response = await fetch(url);
       const data = await response.json();
       setProduct(data);
       console.log(data)
@@ -101,22 +83,30 @@ useEffect(() => {
 
   return (
     <div>
-      <h1>hello</h1>
-
-      <input
+     
+<div>
+      <Input placeholder='Basic usage'
         type="text"
-        placeholder="search"
+        
         data-testid="search_key"
         
         // value={searchKey}
         onChange={handleSearchInputChange}
       />
 
-{/* <input
-        className="search_input"
-        value={query}
-        onChange={e => setQuery(e.target.value)}
-      /> */}
+
+  {/* <h1 style={{color: "black"}}>Sort by Price</h1>
+<select name="" id="" onChange={(e)=>{setSort(e.target.value)}}>
+            <option value="">Sort by Price</option>
+            <option value="high">hightTolow</option>
+            <option value="low">Lowtohigh</option>
+        </select> */}
+        <select name="" id="" onChange={(e)=>{setFilter(e.target.value)}}>
+            <option value="">Filter</option>
+            <option value="Indoor">Indoor</option>
+            <option value="Outdoor">Outdoor</option>
+        </select>
+        </div>
       <ul id="results" >
       {
       state.map((e)=>(
@@ -130,10 +120,10 @@ useEffect(() => {
       </ul>
     
     <div>
-      <div>
+      <div style={{display: "grid", gridTemplateColumns:"1fr 1fr 1fr"}}>
       {
         product?.map((e)=>(
-          <div  style={{display: "grid", gridTemplateColumns:"1fr 1fr 1fr" }} onClick={()=>navigate(`singlewaightfree/${e.id}`)}>
+          <div  style={{display: "grid" ,boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px" }} onClick={()=>navigate(`singlewaightfree/${e.id}`)}>
 
       
       <div >
@@ -141,7 +131,9 @@ useEffect(() => {
       </div>
       <div>
       <p>{e.title}</p>
-      <p>Price: {e.price}</p>
+    
+      <h3> category :{e.category}</h3>
+      <button onClick={()=>navigate(`singlewaightfree/${e.id}`)}>More Details</button>
         </div>
      
       </div>
@@ -150,6 +142,10 @@ useEffect(() => {
       </div>
       
     </div>
+    < Button colorScheme='teal' size='md' disabled={page===1} onClick={()=>{setPage(page-1)}}>prev</Button>
+        <Button colorScheme='blackAlpha'>{page}</Button>
+        <Button colorScheme='teal' size='md' onClick={()=>{setPage(page+1)}}>next</Button>
+        
     </div>
   );
 };

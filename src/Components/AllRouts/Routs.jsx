@@ -15,22 +15,31 @@ import Home from "../Homepage/Home";
 import Login from "../Product/TempLogin/TempLogin";
 
 import PrivateRout from "./PrivateRout";
+import AllData from "../AllData";
+import Register from "../Login/Register";
+import Subscribe from "../Subscribe/Subscribe";
+import { Payment } from "@mui/icons-material";
 
 const AllRoutes = () => {
   return(
 
 <Routes>
-  <Route  path="/" element={<Home/>}></Route>
+  <Route  path="/" element={<AllData/>}></Route>
   <Route path="boxing" element={<Boxing/>}></Route>
-  <Route path="/boxing/singleboxing/:id" element={<PrivateRout><SingleBoxing/></PrivateRout>}></Route>
+  <Route path="/boxing/singleboxing/:id" element={<SingleBoxing/>}></Route>
   <Route path="yoga" element={<Yoga/>}></Route>
   <Route path="/yoga/singleyoga/:id" element={<SingleYoga/>}></Route>
   <Route path="cardio" element={<Cardio/>}></Route>
   <Route path="/cardio/singlecardio/:id" element={<SingleCardio/>}></Route>
   <Route path="waightfree" element={<WaightFree/>}></Route>
-  <Route path="/waightfree/singlewaightfree/:id" element={<SinglWaightFree/>}></Route>
+  <Route path="/waightfree/singlewaightfree/:id" element={<PrivateRout><SinglWaightFree/></PrivateRout>}></Route>
 
-  <Route  path="/login" element={<Login/>}/>   
+
+
+
+  <Route  path="/login" element={<Register/>}/>   
+  <Route  path="/subscribe" element={<Subscribe/>}/>  
+  <Route  path="/payment" element={<PrivateRout><Payment/></PrivateRout>}/> 
 
 
 </Routes>

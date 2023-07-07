@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import card from "../Images/card_img.png"
+import { useNavigate } from "react-router-dom";
 import "./pay.css"
 const Payment = () => {
   const [toastActive, setToastActive] = useState(false);
   const [progressActive, setProgressActive] = useState(false);
-
+  const navigate= useNavigate()
   const handleButtonClick = () => {
     setToastActive(true);
     setProgressActive(true);
@@ -50,7 +51,7 @@ const Payment = () => {
           <div className="progressP"></div>
 
           <div>
-            <button id="homeP">
+            <button id="homeP" onClick={()=>navigate("/")}>
               <a href="#">HOMEPAGE</a>
             </button>
           </div>

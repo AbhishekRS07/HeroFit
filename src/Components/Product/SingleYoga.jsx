@@ -1,14 +1,18 @@
+
+
 import React from 'react'
 import {useState, useEffect} from "react"
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-export const SingleYoga= () => {
+import { useNavigate } from "react-router-dom";
+export const SingleYoga = () => {
 const[state, setState]=useState({});
 const {id}=useParams();
+const navigate= useNavigate()
 console.log(id)
 useEffect(()=>{
   getData();
-  },[])
+  },[state])
 
 
 
@@ -26,14 +30,15 @@ useEffect(()=>{
 
   return (
     <div>
+       
       {
         <div>
-          <img src={state.image} alt="" />
+          <img src={state.image} alt=""  width="200" height="200" />
           <p>{state.description}</p>
           <h2>{state.price}</h2>
         </div>
       }
-      <button>Buy</button>
+     <button id="start"  onClick={()=>navigate("/subscribe")}> Get Started</button>
     </div>
   )
 }

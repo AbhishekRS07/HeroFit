@@ -11,6 +11,7 @@ const Boxing = () => {
   const[search, setSearch]=useState("")
   const[state, setState]=useState([])
   const[sort, setSort]=useState("")
+  const[filter, setFilter]=useState("")
 //  console.log(state)
 const navigate= useNavigate()
 
@@ -47,15 +48,20 @@ return ()=> clearTimeout(debounceFn);
 
 useEffect(() => {
   fetchProductData();
-}, [page,sort]);
+}, [page,sort,filter]);
 
   const fetchProductData = async () => {
-    let url=`https://herofit-app-server.onrender.com/boxing?_page=${page}&_limit=5`
-    if(sort==="high"){
-        url+="&_sort=price&_order=desc"
-    }  if(sort==="low"){
-        url+="&_sort=price&_order=asc"
+    let url=`https://herofit-app-server.onrender.com/boxing?_page=${page}&_limit=9`
+    // if(sort==="high"){
+    //     url+="&_sort=price&_order=desc"
+    // }  if(sort==="low"){
+    //     url+="&_sort=price&_order=asc"
 
+    // }
+
+    
+    if (filter) {
+      url += `&category=${filter}`;
     }
     try {
       const response = await fetch(url);
@@ -86,16 +92,16 @@ useEffect(() => {
       />
 
 
-  <h1 style={{color: "black"}}>Sort by Price</h1>
+  {/* <h1 style={{color: "black"}}>Sort by Price</h1>
 <select name="" id="" onChange={(e)=>{setSort(e.target.value)}}>
             <option value="">Sort by Price</option>
             <option value="high">hightTolow</option>
             <option value="low">Lowtohigh</option>
-        </select>
-        <select name="" id="" >
+        </select> */}
+        <select name="" id="" onChange={(e)=>{setFilter(e.target.value)}}>
             <option value="">Filter</option>
-            <option value="high">hightTolow</option>
-            <option value="low">Lowtohigh</option>
+            <option value="Indoor">Indoor</option>
+            <option value="Outdoor">Outdoor</option>
         </select>
         </div>
       <ul id="results" >
@@ -122,7 +128,8 @@ useEffect(() => {
       </div>
       <div>
       <p>{e.title}</p>
-      <p>Price: {e.price}</p>
+    
+      <h3> category :{e.category}</h3>
       <button onClick={()=>navigate(`singleboxing/${e.id}`)}>More Details</button>
         </div>
      
