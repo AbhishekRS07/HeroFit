@@ -23,12 +23,13 @@ function App() {
       <Main/>
       <TrySection />
       <News />
+      <Slider/>
       <Footer /> 
      
-      <Slider/>
-       <Subscribe/> 
+      
+       {/* <Subscribe/> 
       <Register/>
-      <Payment/> 
+      <Payment/>  */}
     </div>
   );
 }

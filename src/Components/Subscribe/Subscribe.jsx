@@ -1,7 +1,7 @@
 import React from "react";
 import "./sub.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import logo from "../Images/logo.png";
 
 const Subscribe = () => {
