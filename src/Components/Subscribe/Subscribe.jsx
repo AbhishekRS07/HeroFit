@@ -1,13 +1,14 @@
 import React from "react";
 import "./sub.css";
-
 import logo from "../Images/logo.png";
-
+import { useNavigate } from "react-router-dom";
 const Subscribe = () => {
+
+  const navigate= useNavigate()
   return (
     <div id="parent">
       <div id="logo">
-        <img src={logo} alt="" />
+        <img src={logo} alt=""  />
         <h2>Our Subscription Packs according to your need!</h2>
         
         <p>
@@ -19,7 +20,7 @@ const Subscribe = () => {
           personalized training sessions.
         </p>
         
-        <button id="start">Homepage</button>
+        <button id="start"   onClick={()=>navigate("/")}>Homepage</button>
       </div>
       <div id="card-area">
         <div className="wrapper">
@@ -35,7 +36,8 @@ const Subscribe = () => {
                  Includes Cardio &
                  Weight Training.
                 </p>
-                <a href="#">Book Now</a>
+                {/* <a href="#">Book Now</a> */}
+                <button onClick={()=>navigate("/payment")}>Book Now</button>
               </div>
             </div>
             <div className="box">
@@ -50,7 +52,8 @@ const Subscribe = () => {
                  Weight Training & access to the
                  Zumba Class and Steam Sauna
                 </p>
-                <a href="#">Book Now</a>
+                {/* <a href="#">Book Now</a> */}
+                <button onClick={()=>navigate("/payment")}>Book Now</button>
               </div>
             </div>
             <div className="box">
@@ -65,7 +68,8 @@ const Subscribe = () => {
                  Weight Training,
                  Zumba Class, Steam Sauna and Yoga Classes
                 </p>
-                <a href="#">Book Now</a>
+                {/* <a href="#">Book Now</a> */}
+                <button onClick={()=>navigate("/payment")}>Book Now</button>
               </div>
             </div>
             <div className="box">
@@ -81,7 +85,8 @@ const Subscribe = () => {
                  Zumba Class, Steam Sauna, Yoga Classes,
                  Personal Trainer 
                 </p>
-                <a href="#">Book Now</a>
+                {/* <a href="#">Book Now</a> */}
+                <button onClick={()=>navigate("/payment")}>Book Now</button>
               </div>
             </div>
           </div>

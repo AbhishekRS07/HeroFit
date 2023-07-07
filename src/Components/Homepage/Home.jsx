@@ -2,11 +2,14 @@ import React from "react";
 import "./home.css";
 import person from "../Images/person.png"
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-
+import ProductPage from "../Product/Boxing";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+
+  const navigate= useNavigate()
   return (
     <div id="homeparent">
-      <div id="homephoto">
+      <div id="homephoto"  >
         <img src={person} alt="" />
       </div>
       <div id="hometext">
@@ -16,11 +19,12 @@ const Home = () => {
           Stylish and Modern fitness clubfor those who wants to achive your
           perfect body with professional trainers
         </p>
-        <div id="btns">
+        <div id="btns"  onClick={()=>navigate("/subscribe")}>
         <button id="start"> Get Started</button>
         <button id="watch"> < PlayCircleOutlineIcon sx={{fontSize:"30px"}}/>Watch Me!</button>
         </div>
       </div>
+     
     </div>
   );
 };

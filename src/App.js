@@ -1,10 +1,12 @@
 import "./App.css";
 import AllData from "./Components/AllData";
+import AllRoutes from "./Components/AllRouts/Routs";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Homepage/Home";
 import Register from "./Components/Login/Register";
 import Main from "./Components/Main/Main";
 import Navbar from "./Components/NavigationBar/Navbar";
+import { TempNav } from "./Components/NavigationBar/TempNav";
 import News from "./Components/News/News";
 import Payment from "./Components/Payment/Payment";
 import Slider from "./Components/Slider/Slider";
@@ -16,18 +18,22 @@ import TrySection from "./Components/TrySection/TrySection";
 
 
 
-
 function App() {
   return (
     <div className="App">
-      {/* <Navbar />
-    <AllData/>
-      <Footer /> */}
+      {/*
+  */}
+     {/* <Navbar /> */}
+    {/* <AllData/> */}
+
+    <Navbar/>
+    <AllRoutes/>
     
-      
-      {/* <Subscribe/> */}
-      {/* <Register/> */}
-      {/* <Payment/> */}
+    <Footer />
+ 
+        {/* <Subscribe/>  */}
+      {/* <Register/>
+      <Payment/>   */}
     </div>
   );
 }
