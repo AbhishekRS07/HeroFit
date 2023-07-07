@@ -32,6 +32,13 @@
 #try2>img{
    
    width: 90%;
+   cursor: pointer;
+  
+}
+
+#try2>img:hover{
+   
+   width: 80%;
   
 }
 h1{

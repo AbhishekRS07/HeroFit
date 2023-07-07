@@ -5,6 +5,7 @@
     align-items: center;
     background-color: #310e68;
     background-image: linear-gradient(to right,rgb(9,2,15), rgb(34,11,56),rgb(0, 0, 0));
+    font-family: 'Montserrat', sans-serif;
 }
 #parent2{
     width: 100%;
@@ -41,6 +42,7 @@
     width: 30%;
     /* border: 2px solid black; */
     padding: 10px;
+    cursor: pointer;
 }
 #child2{
     display: flex;
@@ -52,6 +54,7 @@
     width: 20%;
     /* border: 2px solid black; */
      padding: 10px;
+     cursor: pointer;
 }
 
 #child3{
@@ -64,6 +67,7 @@
     width: 20%;
     /* border: 2px solid black; */
      padding: 10px;
+     cursor: pointer;
 }
 #child4{
     display: flex;
@@ -76,13 +80,19 @@
     width: 20%;
     /* border: 2px solid black; */
      padding: 10px;
+     cursor: pointer;
 }
 
 h1,h2{
     color: white;
 }
-p{
+#parentfooter p{
     color: rgb(177, 175, 177);
+}
+#parentfooter p:hover{
+    font-size: 20px;
+    color: rgb(253, 251, 253);
+    font-weight: 500;
 }
 #child1 input{
     width: 300px;
