@@ -16,7 +16,7 @@ useEffect(()=>{
 
 
   const getData=()=>{
-  axios.get(`https://herofit-app-server.onrender.com/boxing/${id}`).then((res)=>{
+  axios.get(`https://fitserver-n60z.onrender.com/boxing/${id}`).then((res)=>{
   console.log(res.data)
   setState(res.data)
   })

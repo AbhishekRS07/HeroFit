@@ -37,7 +37,7 @@ return ()=> clearTimeout(debounceFn);
   const getData= async ()=>{
    
 
-    let res= await axios.get(`https://herofit-app-server.onrender.com/boxing?q=${search}`)
+    let res= await axios.get(`https://fitserver-n60z.onrender.com/boxing?q=${search}`)
     console.log(res.data);
     setState(res.data)
   }
@@ -51,7 +51,7 @@ useEffect(() => {
 }, [page,sort,filter]);
 
   const fetchProductData = async () => {
-    let url=`https://herofit-app-server.onrender.com/boxing?_page=${page}&_limit=9`
+    let url=`https://fitserver-n60z.onrender.com/boxing?_page=${page}&_limit=9`
     // if(sort==="high"){
     //     url+="&_sort=price&_order=desc"
     // }  if(sort==="low"){
@@ -100,11 +100,12 @@ useEffect(() => {
         </select> */}
         <select name="" id="" onChange={(e)=>{setFilter(e.target.value)}}>
             <option value="">Filter</option>
+            <option value="equipment">Equipments</option>
             <option value="Indoor">Indoor</option>
             <option value="Outdoor">Outdoor</option>
         </select>
         </div>
-      <ul id="results" >
+      <ul  >
       {
       state.map((e)=>(
         <div key={e.id}    onClick={()=>navigate(`singleboxing/${e.id}`)}

@@ -19,9 +19,9 @@ const Home = () => {
           Stylish and Modern fitness clubfor those who wants to achive your
           perfect body with professional trainers
         </p>
-        <div id="btns"  onClick={()=>navigate("/subscribe")}>
-        <button id="start"> Get Started</button>
-        <button id="watch"> < PlayCircleOutlineIcon sx={{fontSize:"30px"}}/>Watch Me!</button>
+        <div id="btns" >
+        <button id="start"  onClick={()=>navigate("/subscribe")}> Get Started</button>
+        <button id="watch" onClick={()=>navigate("/videoPlayer")}> < PlayCircleOutlineIcon sx={{fontSize:"30px"}} />Watch Me!</button>
         </div>
       </div>
      
