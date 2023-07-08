@@ -1,4 +1,5 @@
 import "./App.css";
+import Program from "./Components/Datapage/Program";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Homepage/Home";
 import Register from "./Components/Login/Register";
@@ -18,17 +19,17 @@ import TrySection from "./Components/TrySection/TrySection";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar />
+      <Navbar />
       <Home />
       <Main/>
       <TrySection />
       <News />
-      <Footer /> */}
-     
+      <Footer />
+      <Program/>
       
-      {/* <Subscribe/> */}
-      {/* <Register/> */}
-      {/* <Payment/> */}
+      <Subscribe/>
+      <Register/>
+      <Payment/>
     </div>
   );
 }
