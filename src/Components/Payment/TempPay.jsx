@@ -129,7 +129,7 @@ const TempPay = () => {
             className="submit-btnP"
             onClick={handleButtonClick}
           >
-            Proceed to Checkout
+           Subscribe
           </button>
         </div>
       </div>
