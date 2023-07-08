@@ -1,7 +1,8 @@
 #singleparent{
     width: 100%;
-    height: 550px;
+    height: auto;
     background-color: rgb(32, 32, 32);
+    padding: 50px;
     
 }
 
@@ -30,11 +31,14 @@
 
 #singleimg{
     width: 40%;
-    height: 100%;
+    height: 90%;
+   
     /* border: 2px solid black; */
 }
 #singleimg>img{
-    width: 100%;
+    width: 90%;
+    
+    object-fit: contain;
     border-radius: 10px;
 }
 #singletxt{

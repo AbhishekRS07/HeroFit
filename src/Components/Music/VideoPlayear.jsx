@@ -1,7 +1,7 @@
 
 import React, { useRef, useState } from 'react';
 import { Box, Button, Center } from '@chakra-ui/react';
-
+import "./mandv.css"
 import video from "../Images/video.mp4";
 
 const VideoPlayer = () => {
@@ -19,12 +19,13 @@ const VideoPlayer = () => {
   };
 
   return (
-    <Box sx={styles.container}>
-      <video ref={videoRef} style={styles.video}>
+    <Box id='vidplay' >
+      <h2 id='vidh'>Daily a new fitness video by our personal trainers to keep you going!</h2>
+      <video id='vid' ref={videoRef} >
         <source src={video} type="video/mp4" />
       </video>
       <Center>
-        <Button onClick={handlePlayPause} sx={styles.button}>
+        <Button id='vidbtn' onClick={handlePlayPause} >
           {isPlaying ? 'Pause' : 'Play'}
         </Button>
       </Center>
@@ -32,20 +33,6 @@ const VideoPlayer = () => {
   );
 };
 
-const styles = {
-  container: {
-    marginBottom: '20px',
-    justifyContent: 'center',
-  },
-  video: {
-    width: '60%',
-    marginLeft: '300px',
-    display: 'flex'
-  },
-  button: {
-    colorScheme: 'blue',
-    size: 'md',
-  },
-};
+
 
 export default VideoPlayer;
