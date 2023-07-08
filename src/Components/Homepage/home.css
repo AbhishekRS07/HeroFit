@@ -22,11 +22,13 @@
     cursor: pointer;
     
 }
-#homephoto>img:hover{
+
+/* #homephoto>img:hover{
     width: 95%;
-     /* height: 530px; */
+     height: 530px;
      
- }
+ } */
+
 #hometext{
     /* margin-top: 20px; */
     /* border: 2px solid black; */

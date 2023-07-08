@@ -79,7 +79,7 @@ useEffect(() => {
 
   if (loading) {
     return <div id='gif'>
-    <img src="https://www.icegif.com/wp-content/uploads/loading-icegif.gif" alt="" />
+    <img src="https://miro.medium.com/v2/resize:fit:1100/1*e_Loq49BI4WmN7o9ItTADg.gif" alt="" />
   </div>;
   }
 
@@ -89,7 +89,7 @@ useEffect(() => {
       <div id='options'>
      
 <div>
-      <Input placeholder='Basic usage'
+      <Input color='white' placeholder='Basic usage'
         type="text"
         
         data-testid="search_key"
@@ -111,7 +111,7 @@ useEffect(() => {
             <option value="Outdoor">Outdoor</option>
         </select>
         </div>
-      <ul id="results" >
+      <ul style={{color:"white"}} >
       {
       state.map((e)=>(
         <div key={e.id}    onClick={()=>navigate(`singlecardio/${e.id}`)}
