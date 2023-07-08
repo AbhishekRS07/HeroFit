@@ -1,41 +1,34 @@
 import React from 'react'
 import {Link as RouterLink} from "react-router-dom"
+import "./Navbar.css"
 
 
 export const TempNav = () => {
 
     let mylink=[
+       
         {
-            title: "Home",
-            path: "/"
-        },
-        {
-            title: "Boxing",
+            title: "BOXING",
             path: "/boxing"
         },
         {
-            title: "cardio",
+            title: "CARDIO",
             path: "/cardio"
         },
         {
-            title: "Yoga",
+            title: "YOGA",
             path: "/yoga"
         },
         {
-            title: "WaightFree",
+            title: "WEIGHT TRAINING",
             path: "/waightfree"
         },
-        {
-            title: "Music",
-            path: "/song"
-        },
-        {
-            path:"/login",
-            title: "Login"
-        },
+        
+      
+       
     ]
   return (
-<div>
+<div id='tempnav'>
    {
     mylink.map((e)=>(<RouterLink key={e.path} to={e.path}>{e.title}</RouterLink>))
    }

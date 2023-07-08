@@ -20,7 +20,8 @@ const Navbar = () => {
       }
         if(scrolled<20){
      
-      document.querySelector(".Navbar").style.background= "transparent";
+      document.querySelector(".Navbar").style.background= "rgb(27, 5, 46)";
+     
      
   }
     };
@@ -76,7 +77,7 @@ const Navbar = () => {
       <div id='btns'>
       {isAuth ? (
           <>
-  <h2  >Aniket</h2> 
+  <h3 style={{color:"white"}}>Aniket</h3> 
   <button  id="signin" onClick={() => {logout()}}>Log out</button>
   </>
   

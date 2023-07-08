@@ -6,7 +6,7 @@ const Footer = () => {
       <div id="grandparent">
         <div id="parentfooter">
       <div id="child1">
-        <h1>HeroFit.</h1>
+        <h2>HeroFit.</h2>
         <p>Lorem ipsum dolor sit amet.</p>
         <p>Lorem ipsum dolor sit amet.</p>
         <p>Lorem, ipsum dolor.</p>

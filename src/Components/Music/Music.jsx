@@ -155,6 +155,8 @@ import { Box, Button, Center, Text } from '@chakra-ui/react';
 
 import song from "../Images/song.mpeg";
 import image from "../Images/image.gif"
+import "./mandv.css"
+
 const Music = () => {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -199,13 +201,13 @@ const Music = () => {
           <div className="circle" />
           <div className="circle" />
         </nav>
-        <Box className="music-player" style={{ display: 'flex', justifyContent: 'center' }}>
+        <Box className="music-player">
   {/* ... */}
-  <img src={image} alt="Song" className="song-img" style={{ width: '60%' }} />
+  <img src={image} alt="Song" className="song-img"  />
  
   {/* ... */}
 </Box>
-<h1 style={{ color: 'blue', fontSize: '24px', textAlign: 'center' }}>Exciting new features coming soon! Stay tuned!</h1>
+<h1 style={{color:"white"}} >Exciting new features coming soon! Stay tuned!</h1>
 
         {/* <img src={image} alt="Song" className="song-img" /> */}
         <Text as="h1" fontSize="20px" fontWeight="600" color="white" marginTop="20px">
@@ -221,22 +223,22 @@ const Music = () => {
           max="100"
           step="1"
           defaultValue="0"
-          style={{ width: '100%', height: '6px', background: 'white', borderRadius: '4px', cursor: 'pointer', margin: '40px 0' }}
+          style={{ width: '50%', height: '6px',  borderRadius: '4px', cursor: 'pointer', margin: 'left' }}
         />
         <Center className="controls">
-          <Button className="previous-btn" width="60px" height="60px" margin="20px" backgroundColor="white" borderRadius="50%" color="#0f02f9" boxShadow="0 5px 20px rgba(246, 243, 243, 0.22)" onClick={playPreviousSong}>
+          <Button className="previous-btn" width="60px" height="60px" margin="20px" backgroundColor="white" borderRadius="50%" color="purple" boxShadow="0 5px 20px rgba(246, 243, 243, 0.22)" onClick={playPreviousSong}>
             Prev
           </Button>
           {isPlaying ? (
-            <Button className="play-pause-btn" width="60px" height="60px" margin="20px" backgroundColor="#0e02f8" color="white" borderRadius="50%" boxShadow="0 5px 20px rgba(246, 243, 243, 0.22)" onClick={pauseSong}>
+            <Button className="play-pause-btn" width="60px" height="60px" margin="20px" backgroundColor="#0e02f8" color="purple" borderRadius="50%" boxShadow="0 5px 20px rgba(246, 243, 243, 0.22)" onClick={pauseSong}>
               Pause
             </Button>
           ) : (
-            <Button className="play-pause-btn" width="60px" height="60px" margin="20px" backgroundColor="white" borderRadius="50%" color="#0f02f9" boxShadow="0 5px 20px rgba(246, 243, 243, 0.22)" onClick={playSong}>
+            <Button className="play-pause-btn" width="60px" height="60px" margin="20px" backgroundColor="white" borderRadius="50%" color="purple" boxShadow="0 5px 20px rgba(246, 243, 243, 0.22)" onClick={playSong}>
               Play
             </Button>
           )}
-          <Button className="next-btn" width="60px" height="60px" margin="20px" backgroundColor="white" borderRadius="50%" color="#0f02f9" boxShadow="0 5px 20px rgba(246, 243, 243, 0.22)" onClick={playNextSong}>
+          <Button className="next-btn" width="60px" height="60px" margin="20px" backgroundColor="white" borderRadius="50%" color="purple" boxShadow="0 5px 20px rgba(246, 243, 243, 0.22)" onClick={playNextSong}>
             Next
           </Button>
         </Center>

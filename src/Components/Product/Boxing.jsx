@@ -3,6 +3,9 @@ import axios from "axios"
 import { Navigate, useNavigate } from "react-router-dom";
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { Input } from '@chakra-ui/react'
+import { TempNav } from '../NavigationBar/TempNav'
+import "./products.css"
+import Gif from "../Images/loadingGif.gif"
 
 const Boxing = () => {
   const [product, setProduct] = useState(null);
@@ -75,13 +78,18 @@ useEffect(() => {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div id='gif'>
+      <img src="https://www.icegif.com/wp-content/uploads/loading-icegif.gif" alt="" />
+    </div>;
   }
 
   return (
-    <div>
+    <div id='proddiv'>
+ <TempNav/>
+      <div id='options'>
      
 <div>
+ 
       <Input placeholder='Basic usage'
         type="text"
         
@@ -116,18 +124,18 @@ useEffect(() => {
       ))
     }
       </ul>
-    
+      </div>
     <div>
-      <div style={{display: "grid", gridTemplateColumns:"1fr 1fr 1fr"}}>
+      <div id='maindiv'>
       {
         product?.map((e)=>(
-          <div  style={{display: "grid" ,boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px" }} onClick={()=>navigate(`singleboxing/${e.id}`)}>
+          <div id='secdiv' onClick={()=>navigate(`singleboxing/${e.id}`)}>
 
       
-      <div >
-      <img src={e.image} alt="" width="200" height="200"  />
+      <div id='mainimg' >
+      <img src={e.image} alt=""  />
       </div>
-      <div>
+      <div id='maintext'>
       <p>{e.title}</p>
     
       <h3> category :{e.category}</h3>
@@ -140,10 +148,11 @@ useEffect(() => {
       </div>
       
     </div>
-    < Button colorScheme='teal' size='md' disabled={page===1} onClick={()=>{setPage(page-1)}}>prev</Button>
+    <div id='buttonz'>
+    < Button colorScheme='teal' size='md' disabled={page===1} onClick={()=>{setPage(page-1)}}>Previous</Button>
         <Button colorScheme='blackAlpha'>{page}</Button>
-        <Button colorScheme='teal' size='md' onClick={()=>{setPage(page+1)}}>next</Button>
-        
+        <Button colorScheme='teal' size='md' onClick={()=>{setPage(page+1)}}>Next</Button>
+        </div>
     </div>
   );
 };

@@ -9,7 +9,7 @@
 }
 #parent2{
     width: 100%;
-    padding: 20px;
+    padding: 15px;
     height: auto;
     display: flex;
     align-items:center;
@@ -19,11 +19,11 @@
 }
 
 #logo2 {
-    width: 20%;
+    width: 15%;
    }
 #parentfooter{
     width: 100%;
-    height: 400px;
+    height: 350px;
     /* border: 2px solid rgb(252, 251, 251); */
     display: flex;
     flex-direction: row;
@@ -38,7 +38,7 @@
     align-items: center;
     /* justify-content: space-around; */
     gap: 23px;
-    height: 400px;
+    height: 350px;
     width: 30%;
     /* border: 2px solid black; */
     padding: 10px;
@@ -50,7 +50,7 @@
     align-items:center;
     /* justify-content:space-around; */
     gap: 20px;
-    height: 400px;
+    height: 350px;
     width: 20%;
     /* border: 2px solid black; */
      padding: 10px;
@@ -63,7 +63,7 @@
     align-items: center;
     /* justify-content: space-around; */
     gap: 30px;
-    height: 400px;
+    height: 350px;
     width: 20%;
     /* border: 2px solid black; */
      padding: 10px;
@@ -76,14 +76,14 @@
     /* justify-content: space-around;
      */
      gap: 30px;
-    height: 400px;
+    height: 350px;
     width: 20%;
     /* border: 2px solid black; */
      padding: 10px;
      cursor: pointer;
 }
 
-#parentfooter h1,h2{
+#parentfooter >h2{
     color: white;
 }
 #parentfooter p{
@@ -96,7 +96,7 @@
 }
 #child1 input{
     width: 300px;
-    height: 50px;
+    height: 40px;
     border-radius: 50px;
 }
 label{
