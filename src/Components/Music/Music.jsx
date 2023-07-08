@@ -158,6 +158,7 @@ import image from "../Images/image.gif"
 const Music = () => {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  //commit
 
   const songs = [
     {
