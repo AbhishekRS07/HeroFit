@@ -5,6 +5,7 @@ import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Homepage/Home";
 import Register from "./Components/Login/Register";
 import Main from "./Components/Main/Main";
+import VideoPlayer from "./Components/Music/VideoPlayear";
 import Navbar from "./Components/NavigationBar/Navbar";
 import { TempNav } from "./Components/NavigationBar/TempNav";
 import News from "./Components/News/News";
@@ -34,6 +35,7 @@ function App() {
         {/* <Subscribe/>  */}
       {/* <Register/>
       <Payment/>   */}
+     
     </div>
   );
 }

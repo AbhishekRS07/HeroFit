@@ -52,7 +52,7 @@ const Payment = () => {
 
           <div>
             <button id="homeP" onClick={()=>navigate("/")}>
-              <a href="#">HOMEPAGE</a>
+             HOMEPAGE
             </button>
           </div>
         </div>

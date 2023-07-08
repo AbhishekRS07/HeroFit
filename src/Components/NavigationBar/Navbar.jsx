@@ -77,7 +77,7 @@ const Navbar = () => {
       <div id='btns'>
       {isAuth ? (
           <>
-  <h2 id="signin" >Aniket</h2> 
+  <h2  >Aniket</h2> 
   <button  id="signin" onClick={() => {logout()}}>Log out</button>
   </>
   
