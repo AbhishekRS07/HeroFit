@@ -20,7 +20,7 @@ const VideoPlayer = () => {
 
   return (
     <Box id='vidplay' >
-      <h2 id='vidh'>Daily a new fitness video by our personal trainers to keep you going!</h2>
+      <h2 id='vidh'>Tour of our gym!</h2>
       <video id='vid' ref={videoRef} >
         <source src={video} type="video/mp4" />
       </video>

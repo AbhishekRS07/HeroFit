@@ -16,7 +16,7 @@ const Home = () => {
         <p style={{color:"lightgreen"}}>#1 in Trending Now!</p>
         <h1>Making different <br/> from build perfect health</h1>
         <p>
-          Stylish and Modern fitness clubfor those who wants to achive your
+          Stylish and Modern fitness club for those who wants to achive your
           perfect body with professional trainers
         </p>
         <div id="btns" >

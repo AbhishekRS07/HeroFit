@@ -20,7 +20,7 @@ const Navbar = () => {
       }
         if(scrolled<20){
      
-      document.querySelector(".Navbar").style.background= "rgb(27, 5, 46)";
+      document.querySelector(".Navbar").style.background= "rgb(34,11,56)";
      
      
   }
