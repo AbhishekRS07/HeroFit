@@ -63,11 +63,11 @@ const Register = () => {
           <form action="#" className="sign-in-formA"  onSubmit={handleSubmit} >
             <h2 className="titleA">Sign in</h2>
             <div className="input-fieldA">
-             
+            <i className="fas fa-lock"></i>
               <input type="text" placeholder="Username" onChange={(e) => setEmail(e.target.value) } />
             </div>
             <div className="input-fieldA">
-             
+            <i className="fas fa-lock"></i>
               <input type="password" placeholder="Password"  onChange={(e) => setPassword(e.target.value)} />
             </div>
             <input type="submit" value="Login" className="btnA solidA" />
@@ -76,15 +76,15 @@ const Register = () => {
           <form action="#" className="sign-up-formA">
             <h2 className="titleA">Sign up</h2>
             <div className="input-fieldA">
-            
+            <i className="fas fa-lock"></i>
               <input type="text" placeholder="Username" />
             </div>
             <div className="input-fieldA">
-            
+            <i className="fas fa-lock"></i>
               <input type="email" placeholder="Email" />
             </div>
             <div className="input-fieldA">
-              
+            <i className="fas fa-lock"></i>
               <input type="password" placeholder="Password" />
             </div>
             <input type="submit" className="btnA" value="Sign up" />

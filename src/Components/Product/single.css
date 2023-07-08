@@ -55,7 +55,41 @@ color: white;
 font-size: 20px;
 }
 
-#singletxt:hover{
-    width: 56%;
-    
+
+
+    @media (max-width: 790px) {
+ 
+        #singlecard{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 50px;
+          
+            /* margin-top: 60px; */
+            
+        
+        }
+        #singleimg>img{
+            width: 100%;
+         
+        }
+        #singleimg{
+            width: 100%;
+            height: auto;
+           
+            /* border: 2px solid black; */
+        }
+
+        #singletxt{
+            width: 98%;
+            height: auto;
+            /* border: 2px solid black; */
+           
+        }
+        #singletxt:hover{
+            box-shadow: rgba(75, 75, 75, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            
+            }
+        
     }
