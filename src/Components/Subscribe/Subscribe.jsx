@@ -20,7 +20,7 @@ const Subscribe = () => {
           personalized training sessions.
         </p>
         
-        <button id="start"   onClick={()=>navigate("/")}>Homepage</button>
+        <button id="start" style={{color:"white"}}  onClick={()=>navigate("/")}>Homepage</button>
       </div>
       <div id="card-area">
         <div className="wrapper">
@@ -37,7 +37,7 @@ const Subscribe = () => {
                  Weight Training.
                 </p>
                 {/* <a href="#">Book Now</a> */}
-                <button onClick={()=>navigate("/payment")}>Book Now</button>
+                <button id="sta" onClick={()=>navigate("/payment")}>Book Now</button>
               </div>
             </div>
             <div className="box">
@@ -53,7 +53,7 @@ const Subscribe = () => {
                  Zumba Class and Steam Sauna
                 </p>
                 {/* <a href="#">Book Now</a> */}
-                <button onClick={()=>navigate("/payment")}>Book Now</button>
+                <button  id="sta" onClick={()=>navigate("/payment")}>Book Now</button>
               </div>
             </div>
             <div className="box">
@@ -69,7 +69,7 @@ const Subscribe = () => {
                  Zumba Class, Steam Sauna and Yoga Classes
                 </p>
                 {/* <a href="#">Book Now</a> */}
-                <button onClick={()=>navigate("/payment")}>Book Now</button>
+                <button  id="sta" onClick={()=>navigate("/payment")}>Book Now</button>
               </div>
             </div>
             <div className="box">
@@ -86,7 +86,7 @@ const Subscribe = () => {
                  Personal Trainer 
                 </p>
                 {/* <a href="#">Book Now</a> */}
-                <button onClick={()=>navigate("/payment")}>Book Now</button>
+                <button  id="sta" onClick={()=>navigate("/payment")}>Book Now</button>
               </div>
             </div>
           </div>

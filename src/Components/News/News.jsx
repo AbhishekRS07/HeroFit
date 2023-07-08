@@ -23,8 +23,8 @@ const News = () => {
           <h3>Heading back to the gym? Here's how to avoid injury after coronavirus isolation.</h3><br />
           <p>
           Keen to get back to the gym? Be careful. It's easy to get injured if you've been inactive.
-          </p>
-          <br />
+          </p><br />
+          
           <h6 style={{color:"purple"}}>By Molly Miles</h6>
         </div>
       </div>
@@ -40,7 +40,7 @@ const News = () => {
           <h3>Gym membership: how to get the most out of it, according to a sports scientist.</h3><br />
           <p>
           Gym memberships spike as people make their New Year's resolutions but very few people will.
-          </p><br />
+          </p>
           <h6 style={{color:"purple"}}>By Molly Miles</h6>
         </div>
       </div>
@@ -57,7 +57,7 @@ const News = () => {
           <p>
           Drinking coffee before exercising could make you run faster and lift heavier if you've the right.
           </p>
-          <br />
+          
           <h6 style={{color:"purple"}}>By Molly Miles</h6>
         </div>
       </div>

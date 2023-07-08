@@ -33,7 +33,7 @@ const Slider = () => {
     
     arrowBtns.forEach(btn => {
         btn.addEventListener("click", () => {
-            carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+            carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
         });
     });
     

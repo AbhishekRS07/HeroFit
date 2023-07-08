@@ -32,6 +32,9 @@
     justify-content: center;
     height: 100px;
 }
+#newstag>h2{
+  font-size: 34px;
+}
 
 
 .card {
@@ -86,6 +89,7 @@
 
 .content h3 {
   color: #d5d8d9;
+ 
 }
 .content p{
     font-size: 16px;

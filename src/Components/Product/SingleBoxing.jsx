@@ -3,6 +3,8 @@ import {useState, useEffect} from "react"
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
+import "./single.css"
+
 export const SingleBoxing = () => {
 const[state, setState]=useState({});
 const {id}=useParams();
@@ -27,16 +29,20 @@ useEffect(()=>{
   }
 
   return (
-    <div>
+    <div id='singleparent'>
 
       {
-        <div>
-          <img src={state.image} alt=""  width="200" height="200" />
+        <div id='singlecard'>
+          <div id="singleimg">
+          <img src={state.image} alt=""   />
+          </div>
+          <div id='singletxt'>
           <p>{state.description}</p>
           <h2>{state.price}</h2>
+          </div>
         </div>
       }
-     <button id="start"  onClick={()=>navigate("/subscribe")}> Get Started</button>
+     <button id="starts"  onClick={()=>navigate("/subscribe")}> Get Started</button>
     </div>
   )
 }
