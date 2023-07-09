@@ -106,7 +106,7 @@ useEffect(() => {
             <option value="high">hightTolow</option>
             <option value="low">Lowtohigh</option>
         </select> */}
-        <select name="" id="" onChange={(e)=>{setFilter(e.target.value)}}>
+        <select name="" id="selectdata" onChange={(e)=>{setFilter(e.target.value)}}>
             <option value="">Filter</option>
             <option value="equipment">Equipments</option>
             <option value="Indoor">Indoor</option>

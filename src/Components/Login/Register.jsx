@@ -6,7 +6,7 @@ import { useState } from "react";
 
 
 import { MyAuthContext } from "../Context/AuthContextProvider";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 const Register = () => {
   const [isSignUpMode, setIsSignUpMode] = useState(false);
@@ -73,7 +73,7 @@ const Register = () => {
             <input type="submit" value="Login" className="btnA solidA" />
            
           </form>
-          <form action="#" className="sign-up-formA">
+          <form action="#"  className="sign-up-formA">
             <h2 className="titleA">Sign up</h2>
             <div className="input-fieldA">
             <i className="fas fa-lock"></i>
@@ -87,7 +87,8 @@ const Register = () => {
             <i className="fas fa-lock"></i>
               <input type="password" placeholder="Password" />
             </div>
-            <input type="submit" className="btnA" value="Sign up" />
+           
+            <input herf=".sign-in-formA" type="submit" className="btnA" value="Sign up" />
             
             
           </form>

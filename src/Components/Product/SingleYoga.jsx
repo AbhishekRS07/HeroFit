@@ -38,7 +38,7 @@ useEffect(()=>{
           <img src={state.image} alt=""  />
           </div>
           <div id='singletxt'>
-          <p style={{fontSize:"24px"}} > Exercise Discription:-</p><br />
+          <p style={{fontSize:"24px"}} > Exercise Description:-</p><br />
           <p>{state.description}</p>
           <h2>{state.price}</h2>
           </div>
