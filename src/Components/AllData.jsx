@@ -10,15 +10,22 @@ import Slider from "./Slider/Slider";
 
 import TrySection from "./TrySection/TrySection";
 
+import {motion } from "framer-motion"
+
 const AllData = () => {
   return (
-    <div>
+    <motion.div 
+
+    initial={{width:"0"}}
+    animate={{width:"100%"}}
+    exit={{x: window.innerWidth , transition:{duration: 0.2}}}
+    >
          <Home/>
     <Main/>
     <TrySection />
     <News />
     <Slider/>
-    </div>
+    </motion.div>
 
   )
 }

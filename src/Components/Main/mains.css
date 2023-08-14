@@ -83,6 +83,8 @@
     }
        
         #main-container{
+            padding-left: 20px;
+            padding-right: 20px;
              height: auto;
              gap: 40px;
             display: grid;

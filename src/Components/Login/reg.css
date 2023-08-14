@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
+#regmain {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #310e68;
+    background-image: linear-gradient(to right,rgb(12, 3, 20), rgb(41, 14, 67),rgb(24, 24, 24));
+    font-family: 'Montserrat', sans-serif;
+}
+
+#regbtn {
+  width: 50%;
+  margin-top: 50px;
+  /* display: flex;
+  flex-direction: column; */
+  padding: 20px;
+  /* background-color: #865acc; */
+  
+
+}
+
+#renderbtn1,
+#renderbtn2 {
+  border: 2px solid  rgb(106, 106, 196);
+  width: 50%;
+  padding: 18px 12px;
+  margin: auto;
+  color: white;
+  background-color: #310e68;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+#renderbtn1.active,
+#renderbtn2.active {
+  background-color: rgb(106, 106, 196);
+  color: white;
+  transform: scale(1.05);
+}
+
+#renderbtn1 {
+  border-right: none;
+}
+
+#renderbtn2 {
+  border-left: none;
+}
+
+#regform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  width: 80%;
+  margin: auto;
+}
+
+#regform>input {
+  width: 100%;
+  height: 45px;
+  border-radius: 50px;
+}
+
+#formbtn {
+  width: 50%;
+  height: 45px;
+  border-radius: 50px;
+  background-color: #a16bf8;
+  color: black;
+}
+#formbtn:hover{
+  width: 52%;
+ 
+  background-color: #4f2396;
+  color: #ffff;
+  border: 1px solid white;
+  
+}
+
+@media (max-width: 1024px) {
+  #regbtn {
+    width: 70%;
+   
+  
+  }
+  
+}
+
+@media (max-width: 700px) {
+  #regbtn {
+    width: 90%;
+   
+  
+  }
+  #regform {
+  
+    width: 100%;
+    
+  }
+  
+  
+}
+@media (max-width: 700px) {
+  
+  #regbtn {
+    width: 100%;
+   
+  
+  }
+  }

@@ -13,15 +13,15 @@ const navigate= useNavigate()
 console.log(id)
 useEffect(()=>{
   getData();
-  },[state])
+  },[id])
 
 
 
 
   const getData=()=>{
-  axios.get(`https://herofit-app-server.onrender.com/floating/${id}`).then((res)=>{
+  axios.get(`http://localhost:8080/yoga/${id}`).then((res)=>{
   console.log(res.data)
-  setState(res.data)
+  setState(res.data.yoga)
   })
   
     

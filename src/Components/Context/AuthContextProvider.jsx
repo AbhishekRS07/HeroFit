@@ -12,6 +12,7 @@ function AuthContextProvide({children}) {
  }
 // console.log(token);
  const logout = () => {
+ localStorage.clear();
  setIsAuth(false);
  }
     return(

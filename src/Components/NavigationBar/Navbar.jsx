@@ -45,11 +45,11 @@ const Navbar = () => {
     },
     {
         title: "About",
-        path: "/"
+        path: "/about"
     },
     {
         title: "Blog",
-        path: "/"
+        path: "/slider"
     },
   
     {
@@ -59,7 +59,8 @@ const Navbar = () => {
    
   
   ]
-
+   let username = localStorage.getItem("username")
+   console.log(username)
   return (
     <div className="Navbar">
         <img id='logo1' src={logo} alt=""  onClick={()=>navigate("/")} />
@@ -77,7 +78,8 @@ const Navbar = () => {
       <div id='btns'>
       {isAuth ? (
           <>
-  <h3 style={{color:"white"}}>Aniket</h3> 
+  <h3 style={{color:"white"}}>{username}</h3> 
+ 
   <button  id="signin" onClick={() => {logout()}}>Log out</button>
   </>
   

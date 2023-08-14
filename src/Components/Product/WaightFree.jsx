@@ -4,8 +4,10 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import { TempNav } from "../NavigationBar/TempNav";
+import "./products.css";
+import Gif from "../Images/loadingGif.gif";
 
-const WaightFree = () => {
+const Boxing = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
@@ -13,8 +15,17 @@ const WaightFree = () => {
   const [state, setState] = useState([]);
   const [sort, setSort] = useState("");
   const [filter, setFilter] = useState("");
-  //  console.log(state)
   const navigate = useNavigate();
+
+  const tok = localStorage.getItem("token");
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    console.log(token);
+
+    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+
+    fetchProductData();
+  }, [page, sort, filter]);
 
   useEffect(() => {
     const debounceFn = setTimeout(() => {
@@ -28,44 +39,37 @@ const WaightFree = () => {
     return () => clearTimeout(debounceFn);
   }, [search]);
 
-  const getData = async () => {
-    let res = await axios.get(
-      `https://herofit-app-server.onrender.com/weight?q=${search}`
-    );
-    console.log(res.data);
-    setState(res.data);
-  };
-  const handleSearchInputChange = (e) => {
-    setSearch(e.target.value);
-  };
-
-  useEffect(() => {
-    fetchProductData();
-  }, [page, sort, filter]);
-
   const fetchProductData = async () => {
-    let url = `https://herofit-app-server.onrender.com/weight?_page=${page}&_limit=9`;
-    // if(sort==="high"){
-    //     url+="&_sort=price&_order=desc"
-    // }  if(sort==="low"){
-    //     url+="&_sort=price&_order=asc"
-
-    // }
-
+    let url = `http://localhost:8080/weight?page=${page}&limit=9`;
     if (filter) {
       url += `&category=${filter}`;
     }
     try {
-      const response = await fetch(url);
-      const data = await response.json();
-      setProduct(data);
-      console.log(data);
+      const response = await axios.get(url);
+      const data = response.data;
+      setProduct(data.weight);
       setLoading(false);
     } catch (error) {
       console.log("Error fetching product data:", error);
     }
   };
 
+  const getData = async () => {
+    let res = await axios.get(`http://localhost:8080/weight?q=${search}`);
+    console.log(res.data);
+    setState(res.data.weight);
+  };
+
+  const handleSearchInputChange = (e) => {
+    setSearch(e.target.value);
+  };
+  if (!tok) {
+    return (
+      <div id="gif">
+        <h2>Please Log In</h2>
+      </div>
+    );
+  }
   if (loading) {
     return (
       <div id="gif">
@@ -76,7 +80,7 @@ const WaightFree = () => {
       </div>
     );
   }
-
+  console.log(product);
   return (
     <div id="proddiv">
       <TempNav />
@@ -87,55 +91,45 @@ const WaightFree = () => {
             placeholder="Basic usage"
             type="text"
             data-testid="search_key"
-            // value={searchKey}
             onChange={handleSearchInputChange}
           />
-
-          {/* <h1 style={{color: "black"}}>Sort by Price</h1>
-<select name="" id="" onChange={(e)=>{setSort(e.target.value)}}>
-            <option value="">Sort by Price</option>
-            <option value="high">hightTolow</option>
-            <option value="low">Lowtohigh</option>
-        </select> */}
           <select
             name=""
-            id=""
+            id="selectdata"
             onChange={(e) => {
               setFilter(e.target.value);
             }}
           >
             <option value="">Filter</option>
+            <option value="equipment">Equipments</option>
             <option value="Indoor">Indoor</option>
             <option value="Outdoor">Outdoor</option>
           </select>
         </div>
         <ul style={{ color: "white" }}>
           {state.map((e) => (
-            <div
-              key={e.id}
-              onClick={() => navigate(`singlewaightfree/${e.id}`)}
-            >
+            <div key={e.id} onClick={() => navigate(`/weight/${e.id}`)}>
+              {console.log(e.id)}
               <h3> {e.title}</h3>
             </div>
           ))}
         </ul>
       </div>
-
       <div>
         <div id="maindiv">
           {product?.map((e) => (
             <div
+              key={e.id}
               id="secdiv"
-              onClick={() => navigate(`singlewaightfree/${e.id}`)}
+              onClick={() => navigate(`/weight/${e._id}`)}
             >
               <div id="mainimg">
-                <img src={e.image} alt="" width="200" height="200" />
+                <img src={e.image} alt="" />
               </div>
               <div id="maintext">
                 <p>{e.title}</p>
-
-                <h3> category :{e.category}</h3>
-                <button onClick={() => navigate(`singlewaightfree/${e.id}`)}>
+                <h3> category: {e.category}</h3>
+                <button onClick={() => navigate(`/weight/${e.id}`)}>
                   More Details
                 </button>
               </div>
@@ -152,7 +146,7 @@ const WaightFree = () => {
             setPage(page - 1);
           }}
         >
-          prev
+          Previous
         </Button>
         <Button colorScheme="blackAlpha">{page}</Button>
         <Button
@@ -162,11 +156,11 @@ const WaightFree = () => {
             setPage(page + 1);
           }}
         >
-          next
+          Next
         </Button>
       </div>
     </div>
   );
 };
 
-export default WaightFree;
+export default Boxing;

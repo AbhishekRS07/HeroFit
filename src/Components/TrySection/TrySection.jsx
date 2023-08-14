@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./try.css";
 import phone from "./../Images/phone.png"
+import {motion} from "framer-motion"
 const TrySection = () => {
+  const[rotate,setrotate]= useState(false)
   return (
     <div id="try">
       <div id="try1">
@@ -15,9 +17,12 @@ const TrySection = () => {
         </p>
         <button id="buttonss">Try Now!</button>
       </div>
-      <div id="try2">
+      <motion.div 
+      animate={{rotate:rotate?360:0}}
+      onClick={()=>{setrotate(!rotate)}}
+      id="try2">
       <img src={phone} alt="" />
-      </div>
+      </motion.div>
      
     </div>
   );

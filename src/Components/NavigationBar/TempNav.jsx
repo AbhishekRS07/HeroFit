@@ -21,7 +21,7 @@ export const TempNav = () => {
         },
         {
             title: "WEIGHT TRAINING",
-            path: "/waightfree"
+            path: "/weight"
         },
         
       

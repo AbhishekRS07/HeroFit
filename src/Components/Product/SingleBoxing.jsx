@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 import "./single.css"
+import { border } from '@chakra-ui/react';
 
 export const SingleBoxing = () => {
 const[state, setState]=useState({});
@@ -12,15 +13,15 @@ const navigate= useNavigate()
 console.log(id)
 useEffect(()=>{
   getData();
-  },[state])
+  },[id])
 
 
 
 
   const getData=()=>{
-  axios.get(`https://fitserver-n60z.onrender.com/boxing/${id}`).then((res)=>{
+  axios.get(`http://localhost:8080/boxing/${id}`).then((res)=>{
   console.log(res.data)
-  setState(res.data)
+  setState(res.data.boxing)
   })
   
     
@@ -30,9 +31,13 @@ useEffect(()=>{
 
   return (
     <div id='singleparent'>
-
+      <div style={{marginRight:"100%"}}>
+      <button id="starts" onClick={()=>navigate('/boxing')}>Back to boxing</button>
+      </div>
+    
       {
         <div id='singlecard'>
+          
           <div id="singleimg">
           <img src={state.image} alt=""   />
           </div>
@@ -43,6 +48,7 @@ useEffect(()=>{
           </div>
         </div>
       }
+      
      <button id="starts"  onClick={()=>navigate("/subscribe")}> Get Started</button>
     </div>
   )
